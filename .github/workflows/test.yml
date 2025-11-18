@@ -1,0 +1,17 @@
+name: Test Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Hello message
+        run: echo "El workflow funciona correctamente ;)"
