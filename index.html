@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Visor GeoJSON</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <div class="sidebar-header">
+            <h1>Recorridos</h1>
+            <p>Cahuita, Costa Rica</p>
+        </div>
+
+        <div class="sidebar-content">
+            <div class="section">
+                <div class="section-label">Seleccionar recorrido</div>
+                <select id="geojsonList"></select>
+            </div>
+
+            <div class="section">
+                <div class="section-label">Detalles del recorrido</div>
+                <div id="details">
+                    <div class="empty-state">Seleccione un archivo...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
