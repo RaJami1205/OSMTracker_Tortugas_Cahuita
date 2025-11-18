@@ -4,7 +4,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "hola copy1",
+                "name": "hola",
                 "elevation": 38.699999999999996,
                 "time": "2025-11-11T16:56:11Z",
                 "description": null
@@ -21,7 +21,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Library copy1",
+                "name": "Library",
                 "elevation": 42.0,
                 "time": "2025-11-11T16:56:45Z",
                 "description": null
@@ -38,7 +38,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Fast food copy1",
+                "name": "Fast food",
                 "elevation": 43.4,
                 "time": "2025-11-11T17:03:05Z",
                 "description": null
@@ -55,7 +55,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "en la panader\u00eda copy1",
+                "name": "en la panader\u00eda ",
                 "elevation": 43.6,
                 "time": "2025-11-11T17:03:09Z",
                 "description": null
@@ -72,7 +72,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Police copy1",
+                "name": "Police",
                 "elevation": 36.199999999999996,
                 "time": "2025-11-11T17:10:49Z",
                 "description": null
@@ -89,7 +89,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Recycling copy1",
+                "name": "Recycling",
                 "elevation": 52.699999999999996,
                 "time": "2025-11-11T17:13:52Z",
                 "description": null
@@ -106,7 +106,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Marina copy1",
+                "name": "Marina",
                 "elevation": 52.4,
                 "time": "2025-11-11T17:14:01Z",
                 "description": null
@@ -123,7 +123,7 @@
         {
             "type": "Feature",
             "properties": {
-                "name": "Hostel copy1",
+                "name": "Hostel",
                 "elevation": 42.699999999999996,
                 "time": "2025-11-11T17:18:30Z",
                 "description": null
