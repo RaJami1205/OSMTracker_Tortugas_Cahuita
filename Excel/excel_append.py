@@ -26,4 +26,27 @@ def append_to_excel(diccionario, ruta_excel="censo_tortugas.xlsx"):
         valores.append(valor)
     ws.append(valores)
     wb.save(ruta_excel)
-    print("Datos agregados correctamente a", ruta_excel)
+    print(" Datos agregados correctamente a", ruta_excel)
+
+if __name__ == "__main__":
+    # Crear diccionario de prueba si se ejecuta directamente
+    diccionario_prueba = {
+        "lat": 9.7489,
+        "lon": -82.6751,
+        "hora": "2025-11-28T10:30:00Z",
+        "tipo_avistamiento": "Tortuga",
+        "actividad": "Desovando",
+        "especie": "Verde",
+        "estado_pedunculo": "Completo",
+        "direccion": "Mar",
+        "zona_actividad": "Olas",
+        "destino_nido": "In Situ",
+        "causa_reubicacion": None,
+        "tipo_vivero": None,
+        "pit_tag": None,
+        "hallazgos": ["Marcas", "Cicatrices"]
+    }
+    
+    print(" Creando/Actualizando Excel de prueba...")
+    append_to_excel(diccionario_prueba)
+    print(" Proceso completado")
