@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import sys
+import os
 from excel_append import append_to_excel
 
 # =========================================================
@@ -111,11 +112,35 @@ def parse_gpx(filepath):
     return censo
 
 if __name__ == "__main__":
-    archivo = sys.argv[1]
+    # Validar que se proporcionó argumento
     if len(sys.argv) < 2:
-        print("Uso: " + archivo)
+        print("Error: Se requiere la ruta del archivo GPX")
+        print("Uso: python main.py <archivo.gpx>")
         sys.exit(1)
-    datos = parse_gpx(archivo)
-    append_to_excel(datos)
-    input("Presione enter para salir")
     
+    archivo = sys.argv[1]
+    
+    # Verificar que el archivo existe
+    if not os.path.exists(archivo):
+        print(f"Error: El archivo '{archivo}' no existe")
+        sys.exit(1)
+    
+    try:
+        print(f"📍 Procesando archivo: {archivo}")
+        datos = parse_gpx(archivo)
+        print(f" Datos extraídos correctamente")
+        print(f"   - Especie: {datos['especie']}")
+        print(f"   - Actividad: {datos['actividad']}")
+        print(f"   - Hallazgos: {datos['hallazgos']}")
+        
+        append_to_excel(datos)
+        print(" Datos agregados a censo_tortugas.xlsx")
+        
+    except Exception as e:
+        print(f" Error al procesar archivo: {str(e)}")
+        sys.exit(1)
+    
+    # Solo pide input si está siendo ejecutado localmente (con terminal interactiva)
+    if sys.stdin.isatty():
+        input("Presione enter para salir")
+
