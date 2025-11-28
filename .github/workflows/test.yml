@@ -13,5 +13,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Hello message
-        run: echo "El workflow funciona correctamente ;)"
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run GpxAGeoJson conversion
+        run: python scripts/GpxAGeoJson.py
+
+      - name: Run census data extraction
+        run: python Excel/main.py
