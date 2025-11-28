@@ -22,8 +22,14 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Run GpxAGeoJson conversion
-        run: python scripts/GpxAGeoJson.py
-
       - name: Run census data extraction
         run: python Excel/main.py
+
+      - name: Generate Excel file
+        run: python Excel/excel_append.py
+
+      - name: Upload Census Excel
+        uses: actions/upload-artifact@v3
+        with:
+          name: censo_tortugas
+          path: Excel/censo_tortugas.xlsx
