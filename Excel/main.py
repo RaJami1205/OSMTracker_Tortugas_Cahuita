@@ -126,18 +126,24 @@ if __name__ == "__main__":
         sys.exit(1)
     
     try:
-        print(f"📍 Procesando archivo: {archivo}")
+        print(f" Procesando archivo: {archivo}")
         datos = parse_gpx(archivo)
         print(f" Datos extraídos correctamente")
         print(f"   - Especie: {datos['especie']}")
         print(f"   - Actividad: {datos['actividad']}")
         print(f"   - Hallazgos: {datos['hallazgos']}")
         
-        append_to_excel(datos)
+        #  ESPECIFICAR LA RUTA COMPLETA
+        ruta_excel = os.path.join(os.path.dirname(__file__), "censo_tortugas.xlsx")
+        print(f" Guardando en: {ruta_excel}")
+        
+        append_to_excel(datos, ruta_excel)
         print(" Datos agregados a censo_tortugas.xlsx")
         
     except Exception as e:
         print(f" Error al procesar archivo: {str(e)}")
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
     
     # Solo pide input si está siendo ejecutado localmente (con terminal interactiva)
