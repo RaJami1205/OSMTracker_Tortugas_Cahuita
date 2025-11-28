@@ -23,7 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run census data extraction
-        run: python Excel/main.py
+        run: python Excel/main.py gpx/test.gpx
 
       - name: Generate Excel file
         run: python Excel/excel_append.py
