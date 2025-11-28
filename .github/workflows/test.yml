@@ -29,7 +29,7 @@ jobs:
         run: python Excel/excel_append.py
 
       - name: Upload Census Excel
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: censo_tortugas
           path: Excel/censo_tortugas.xlsx
