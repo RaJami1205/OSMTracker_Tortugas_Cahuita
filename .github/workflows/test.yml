@@ -22,11 +22,17 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Check GPX file exists
+        run: ls -la gpx/
+
       - name: Run census data extraction
         run: python Excel/main.py gpx/test.gpx
 
       - name: Generate Excel file
         run: python Excel/excel_append.py
+
+      - name: Check if Excel was created
+        run: ls -la Excel/
 
       - name: Upload Census Excel
         uses: actions/upload-artifact@v4
